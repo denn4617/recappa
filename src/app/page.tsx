@@ -1,4 +1,4 @@
-import { LoginRegisterModal } from "@/components/LoginRegisterModal";
+import { LoginRegisterModal } from "@/components/AuthModal/LoginRegisterModal";
 import Image from "next/image";
 import Link from "next/link";
 

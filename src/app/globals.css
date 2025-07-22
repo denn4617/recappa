@@ -1,25 +1,33 @@
+@tailwind darkmode class;
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #111111;
-  --color-primary: #a855f7;
+  --color-primary: #7c41f5;
   --color-secondary: #ec4899;
   --color-accent: #f472b6;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --radius: 0.5rem;
+
+  --card-bg: #ffffff;
+  --card-border: #7c41f5;
 }
 
-/* ✅ Manual dark mode override via class (Tailwind standard) */
+
 .dark {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --color-primary: #c084fc;
+  --background: #111111;
+  --foreground: #f4f4f5;
+  --color-primary: #7c41f5;
   --color-secondary: #f472b6;
   --color-accent: #fb7185;
+
+  --card-bg: #1a1a1a;
+  --card-border: #7c41f5;
 }
+
 
 @theme inline {
   --color-background: var(--background);
