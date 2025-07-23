@@ -3,9 +3,10 @@ import { ReactNode } from "react";
 type CardProps = {
   children: ReactNode;
   className?: string;
+  innerClassName?: string;
 };
 
-export function Card({ children, className }: CardProps) {
+export function Card({ children, className, innerClassName }: CardProps) {
   return (
     <div
       className={`rounded-2xl p-[2px] h-fit ${className ?? ""}`}
@@ -15,7 +16,7 @@ export function Card({ children, className }: CardProps) {
     >
       <div
         className={`rounded-[calc(1rem-2px)] bg-[var(--card-bg)] p-6 shadow-lg ${
-          className ?? ""
+          innerClassName ?? ""
         }`}
       >
         {children}

@@ -11,11 +11,12 @@ type Meeting = {
 
 type MeetingListProps = {
   meetings: Meeting[];
+  className?: string;
 };
 
-export function MeetingList({ meetings }: MeetingListProps) {
+export function MeetingList({ meetings, className }: MeetingListProps) {
   return (
-    <div className="space-y-4">
+    <div className={`space-y-4 ${className ?? ""}`}>
       {meetings.map((meeting) => (
         <Link
           key={meeting.id}

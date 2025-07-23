@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Card } from "@/components/Card";
 import Calendar from "@/components/Dashboard/Calendar";
 import { MeetingList } from "@/components/Dashboard/MeetingList";
+import { format, parseISO } from "date-fns";
 
 type Meeting = {
   id: string;
@@ -63,19 +64,34 @@ export default function DashboardPage() {
             <MeetingList meetings={mostRecent} />
           </Card>
 
-          <Card className="h-[400px]">
-            <div className="grid grid-cols-2 gap-4">
-              <Calendar
-                selectedDate={selectedDate}
-                onSelect={setSelectedDate}
-              />
-
-              <MeetingList meetings={meetingsForDate} />
+          <Card className="h-[400px]" innerClassName="h-[400px]">
+            <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-4 h-full">
+              <div className="w-full h-full">
+                <Calendar
+                  selectedDate={selectedDate}
+                  onSelect={setSelectedDate}
+                  meetingDates={dummyMeetings.map((m) => m.date)}
+                />
+              </div>
+              {meetingsForDate.length > 0 ? (
+                <MeetingList meetings={meetingsForDate} className="w-full" />
+              ) : selectedDate ? (
+                <div className="flex items-center justify-center text-sm text-muted-foreground px-4">
+                  No recorded meetings for{" "}
+                  {format(parseISO(selectedDate), "PP")}.
+                </div>
+              ) : (
+                <div className="flex items-center justify-center text-sm text-muted-foreground px-4">
+                  Select a date to view meetings.
+                </div>
+              )}
             </div>
           </Card>
         </div>
 
-        <Card className="h-full">{/* Other content */}</Card>
+        <Card className="h-full" innerClassName="h-full">
+          {/* Other content */}
+        </Card>
       </div>
     </div>
   );
