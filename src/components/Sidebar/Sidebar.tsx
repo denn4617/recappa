@@ -1,6 +1,12 @@
 "use client";
 
-import { LayoutDashboard, Upload, Settings, LogOut } from "lucide-react";
+import {
+  LayoutDashboard,
+  Upload,
+  Settings,
+  LogOut,
+  Building,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -25,6 +31,11 @@ export function Sidebar() {
       label: "Upload",
       icon: <Upload size={20} />,
       href: "/dashboard/upload",
+    },
+    {
+      label: "Organization",
+      icon: <Building size={20} />,
+      href: "/dashboard/organization",
     },
     {
       label: "Settings",
@@ -80,7 +91,7 @@ export function Sidebar() {
               className={`relative z-10 flex items-center justify-center w-12 h-8 transition-all
                 ${
                   isActive
-                    ? "text-[var(--color-primary)] dark:text-white"
+                    ? "text-[var(--color-primary)]"
                     : "hover:bg-white/10 hover:rounded-2xl text-white"
                 }`}
             >
@@ -91,7 +102,7 @@ export function Sidebar() {
       </nav>
 
       {/* Bottom Icon */}
-      <button className="w-12 h-12 flex items-center justify-center hover:bg-white/10 rounded-xl transition-colors">
+      <button className="w-12 h-12 flex items-center justify-center hover:bg-white/10 hover:text-red-600 rounded-xl transition-colors">
         <LogOut size={20} />
       </button>
     </aside>

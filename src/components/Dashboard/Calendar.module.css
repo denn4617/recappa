@@ -1,0 +1,15 @@
+.hasMeeting {
+  position: relative;
+}
+
+.hasMeeting::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
