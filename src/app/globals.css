@@ -15,6 +15,8 @@
   --card-border: #7c41f5;
 
   --meeting-border: #e5e7eb;
+
+  --active-drag: oklch(97% 0.014 254.604);
 }
 
 
@@ -29,6 +31,8 @@
   --card-border: #7c41f5;
 
   --meeting-border: #364153;
+
+  --active-drag: color-mix(in oklab, var(--color-blue-950) 40%, transparent);
 }
 
 

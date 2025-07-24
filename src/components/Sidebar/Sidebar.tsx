@@ -6,6 +6,7 @@ import {
   Settings,
   LogOut,
   Building,
+  CreditCard,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,6 +37,11 @@ export function Sidebar() {
       label: "Organization",
       icon: <Building size={20} />,
       href: "/dashboard/organization",
+    },
+    {
+      label: "Subscription",
+      icon: <CreditCard size={20} />,
+      href: "/dashboard/subscription",
     },
     {
       label: "Settings",
