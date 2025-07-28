@@ -21,13 +21,11 @@ export function MeetingList({ meetings, className }: MeetingListProps) {
         <Link
           key={meeting.id}
           href={`/dashboard/meeting/${meeting.id}`}
-          className="block rounded-lg border border-[var(--meeting-border)] bg-[var(--background)] hover:bg-[var(--color-primary)]/5 p-4 transition-colors shadow-sm"
+          className="block rounded-xl border border-[#2d1f5f] bg-gray-900 hover:bg-violet-500/10 p-4 transition-colors shadow-md"
         >
-          <h3 className="text-lg font-semibold">{meeting.title}</h3>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
-            {meeting.date}
-          </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">
+          <h3 className="text-lg font-semibold text-white">{meeting.title}</h3>
+          <p className="text-xs text-gray-400 mb-2">{meeting.date}</p>
+          <p className="text-sm text-gray-300 line-clamp-2">
             {meeting.summary}
           </p>
         </Link>

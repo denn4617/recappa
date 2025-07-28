@@ -9,13 +9,12 @@ type CardProps = {
 export function Card({ children, className, innerClassName }: CardProps) {
   return (
     <div
-      className={`rounded-2xl p-[2px] h-fit ${className ?? ""}`}
-      style={{
-        background: `linear-gradient(200deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-primary) 100%)`,
-      }}
+      className={`rounded-2xl p-[2px] bg-gradient-to-br from-violet-500 to-pink-500 ${
+        className ?? ""
+      }`}
     >
       <div
-        className={`rounded-[calc(1rem-2px)] bg-[var(--card-bg)] p-6 shadow-lg ${
+        className={`rounded-[calc(1rem-2px)] bg-[#120a35] p-6 shadow-lg ${
           innerClassName ?? ""
         }`}
       >

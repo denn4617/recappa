@@ -1,4 +1,5 @@
-import { Sidebar } from "@/components/Sidebar/Sidebar";
+import { Sidebar } from "@/components/Dashboard/Sidebar/Sidebar";
+import { Topbar } from "@/components/Dashboard/Topbar"; // adjust path as needed
 
 export default function DashboardLayout({
   children,
@@ -6,9 +7,18 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)] flex">
+    <div className="bg-[#0e062b] h-screen w-screen overflow-hidden flex">
+      {/* Sidebar (left) */}
       <Sidebar />
-      <main className="flex-1 h-full overflow-hidden p-6">{children}</main>
+
+      {/* Main layout (right) */}
+      <div className="flex-1 flex flex-col h-full overflow-hidden">
+        {/* Topbar */}
+        <Topbar />
+
+        {/* Scrollable page content */}
+        <main className="flex-1 overflow-auto p-6">{children}</main>
+      </div>
     </div>
   );
 }

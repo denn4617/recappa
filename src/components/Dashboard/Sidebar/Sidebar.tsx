@@ -56,9 +56,9 @@ export function Sidebar() {
   }, [pathname]);
 
   return (
-    <aside className="bg-[var(--color-primary)] text-white rounded-3xl m-2 p-4 w-20 flex flex-col items-center justify-between py-6">
+    <aside className="bg-gray-900 text-white p-4 w-20 flex flex-col items-center justify-between py-6">
       {/* Logo */}
-      <div className="mb-4">
+      <div className="mb-10">
         <Image
           src="/logo.svg"
           alt="Recappa logo"
@@ -72,7 +72,7 @@ export function Sidebar() {
       <nav className="relative flex flex-col items-center gap-4 flex-1">
         {/* Background blob (behind icon) */}
         <motion.div
-          className="absolute z-0 left-0 w-12 h-8 rounded-l-2xl bg-[var(--background)]"
+          className="absolute z-0 left-0 w-12 h-8 rounded-l-2xl bg-[#0e062b]"
           animate={{ y: notchY }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
@@ -83,7 +83,7 @@ export function Sidebar() {
           animate={{ y: notchY }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
-          <Notch className="w-4 h-32 text-[var(--background)]" />
+          <Notch className="w-4 h-32 text-[#0e062b]" />
         </motion.div>
 
         {/* Nav Items */}

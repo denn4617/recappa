@@ -31,13 +31,12 @@ export default function RootLayout({
     ${geistSans.variable} 
     ${geistMono.variable} 
     antialiased 
-    min-h-screen
-    bg-[var(--background)] 
+    min-h-screen 
     text-[var(--foreground)] 
-    transition-colors duration-300
+    transition-colors duration-300 
   `}
       >
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         {children}
       </body>
     </html>

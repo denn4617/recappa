@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
+  /* --background: #fafafa;
   --foreground: #111111;
   --color-primary: #7c41f5;
   --color-secondary: #ec4899;
@@ -16,11 +16,12 @@
 
   --meeting-border: #e5e7eb;
 
-  --active-drag: oklch(97% 0.014 254.604);
+  --active-drag: oklch(97% 0.014 254.604); */
+  
 }
 
 
-.dark {
+/* .dark {
   --background: #111111;
   --foreground: #f4f4f5;
   --color-primary: #7c41f5;
@@ -33,7 +34,7 @@
   --meeting-border: #364153;
 
   --active-drag: color-mix(in oklab, var(--color-blue-950) 40%, transparent);
-}
+} */
 
 
 @theme inline {
@@ -49,8 +50,14 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: #0e062b;
   color: var(--foreground);
   font-family: var(--font-sans);
   transition: background-color 0.3s, color 0.3s;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: white;
 }

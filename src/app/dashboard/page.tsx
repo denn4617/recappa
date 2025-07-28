@@ -57,11 +57,13 @@ export default function DashboardPage() {
 
   return (
     <div className="h-full w-full overflow-hidden flex flex-col">
-      <h1 className="text-2xl font-bold mb-4">Your Meetings</h1>
       <div className="grid grid-cols-[7fr_3fr] gap-10 flex-1 overflow-hidden">
         <div className="grid grid-rows-2 gap-5">
           <Card>
-            <MeetingList meetings={mostRecent} />
+            <span className="text-xl text-white font-bold">
+              Recent Meetings
+            </span>
+            <MeetingList meetings={mostRecent} className="mt-4" />
           </Card>
 
           <Card className="h-[400px]" innerClassName="h-[400px]">
@@ -81,7 +83,7 @@ export default function DashboardPage() {
                   {format(parseISO(selectedDate), "PP")}.
                 </div>
               ) : (
-                <div className="flex items-center justify-center text-sm text-muted-foreground px-4">
+                <div className="flex items-center justify-center text-sm text-gray-400 px-4">
                   Select a date to view meetings.
                 </div>
               )}
@@ -90,7 +92,7 @@ export default function DashboardPage() {
         </div>
 
         <Card className="h-full" innerClassName="h-full">
-          {/* Other content */}
+          <p>TBD</p>
         </Card>
       </div>
     </div>

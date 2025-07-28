@@ -10,7 +10,10 @@
   transform: translateX(-50%);
   width: 0.4rem;
   height: 0.4rem;
-  background-color: var(--color-primary);
-  border-radius: 50%;
+  background-color: #a78bfa;
+  border-radius: 9999px;
 }
 
+.root :global(.rdp-chevron) {
+  fill: violet !important;
+}
